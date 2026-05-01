@@ -2,13 +2,10 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from functools import wraps
-
 from flask import redirect, request, session, url_for
 
 from .db import db
 from .models import User
-
-
 def admin_required(handler: Callable):
     @wraps(handler)
     def wrapper(*args, **kwargs):
