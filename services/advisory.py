@@ -1,6 +1,4 @@
 from dataclasses import dataclass
-
-
 @dataclass(frozen=True)
 class CropProfile:
     name: str
@@ -15,8 +13,6 @@ class CropProfile:
     ph_min: float
     ph_max: float
     fertilizer_focus: str
-
-
 CROP_PROFILES = [
     CropProfile("Rice", "Kharif", 70, 35, 35, 20, 35, 70, 150, 5.0, 7.0, "Nitrogen-rich fertilizer"),
     CropProfile("Maize", "Kharif", 50, 25, 20, 18, 32, 55, 60, 5.5, 7.5, "Balanced NPK fertilizer"),
@@ -26,8 +22,6 @@ CROP_PROFILES = [
     CropProfile("Chilli", "Summer", 40, 25, 30, 20, 33, 50, 40, 6.0, 7.5, "Potassium-rich fertilizer"),
     CropProfile("Sugarcane", "Annual", 80, 35, 35, 20, 38, 60, 100, 6.0, 8.0, "Nitrogen and potassium fertilizer"),
 ]
-
-
 def build_advisory(
     *,
     nitrogen: float,
